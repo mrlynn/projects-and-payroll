@@ -18,3 +18,4 @@ fix_hours.php
 getstats.php
 getevents.php
 getaddress.php
+includes/database_nonuser.php
