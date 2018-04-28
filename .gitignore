@@ -14,3 +14,4 @@ resources/sass/.sass-cache/
 db.php
 configure.php
 changepassword.php
+fix_hours.php
