@@ -75,7 +75,7 @@ This version of this system is Currently under redevelopment.  The system has be
 <h1>Support and Contacts</h1>
 <p>
 <blockquote>
-To obtain support for this version of the Wall Systems Supply Payroll and Scheduling System, contact <a href=mailto:wsspayrollhelp@gmail.com><img src=images/icons/user.png border=0>Mike Lynn</a> at (215) 932-0048.
+To obtain support for this version of the Wall Systems Supply Payroll and Scheduling System, contact <a href=mailto:wsspayrollhelp@gmail.com><img src=images/icons/user.png border=0>Support</a>.
 </blockquote>
 <p>
 
