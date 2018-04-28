@@ -1,0 +1,38 @@
+.sch-weekview .sch-schedulerpanel .x-grid3-hd
+{
+    cursor:pointer;
+}
+
+.weekHeader
+{
+    display:block;
+    margin-bottom:2px;
+}
+
+table.sch-dayIndicator
+{
+    height:auto;
+    width:100%;
+}
+
+table.sch-dayIndicator td {
+    text-align:center;
+	border:0 none;
+}
+
+tr.days td
+{
+    text-align:left;
+}
+
+.days td:hover
+{
+    background:#d7d7d7;
+}
+
+.sch-weekheader .x-grid3-hd-inner
+{
+	padding-left:2px !important;
+	padding-right:0px !important;
+}
+

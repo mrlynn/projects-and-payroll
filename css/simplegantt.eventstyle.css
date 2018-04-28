@@ -1,0 +1,54 @@
+.sch-event 
+{
+    color: #1C3E7D;
+    background-image:url(images/transp-1px.png);
+    cursor: pointer;
+    height:18px;
+    top:1px;
+    -webkit-box-shadow: 1px 1px 1px rgba(120, 120, 120, 0.5);
+    -moz-box-shadow: 1px 1px 1px rgba(120, 120, 120, 0.5); 
+    text-align : center;
+    font-weight:bold;
+    border:1px solid blue;
+    background-color:blue;
+}
+
+.sch-event .sch-event-inner
+{
+    line-height: 1em;
+    white-space:nowrap;
+    padding: 2px 2px 0;
+}
+
+.sch-event-hover 
+{
+    border-color:#777;
+}
+
+.Project1
+{
+    color: #1C3E7D;
+    border:1px solid LimeGreen;
+    background-color:GreenYellow;
+} 
+
+.Project2
+{
+    color: #1C3E7D;
+    border:1px solid #99BBE8;
+    background-color:Aqua;
+} 
+
+.Project3
+{
+    color: #1C3E7D;
+    border:1px solid #aaa;
+    background-color:WhiteSmoke;
+} 
+
+.Project4
+{
+    color: #1C3E7D;
+    border:1px solid Orange;
+    background-color:Red;
+} 

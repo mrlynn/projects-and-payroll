@@ -1,0 +1,40 @@
+/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ */
+ 
+/* Hovering during drag drop*/
+.sch-dd-cellover
+{
+    background:url(../images/altrow.png) repeat;
+}
+
+/* Copy icon when ctrl is pressed during drag drop */
+.x-dd-drop-ok.add .x-dd-drop-icon{
+  background-image: url(http://extjs.cachefly.net/ext-3.1.1/resources/images/default/dd/drop-add.gif);
+}
+
+/* Make sure the event is not displayed absolute when doing drag drop */
+.x-dd-drag-proxy .sch-event
+{
+	max-width:200px;
+    position:static !important;
+    margin-top:2px;
+}
+
+.sch-dd-newtime
+{
+    font-weight:bold;
+    color:#274490;
+    display:block;
+    margin: 0 0 5px 4px;
+}
+
+.x-dd-drag-proxy .sch-event .x-resizable-handle
+{
+	opacity:0 !important;
+	filter: alpha(opacity=0);
+}

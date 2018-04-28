@@ -1,0 +1,2 @@
+
+Ext.ns('Application');Application.WSSGrid=Ext.extend(Ext.grid.EditorGridPanel,{border:false,loadMask:true,stripeRows:true,border:false,autoSizeColumns:true,autoWidth:false,height:300,autoScroll:true,clickstoEdit:1,trackMouseOver:true,sm:new Ext.grid.RowSelectionModel({singleSelect:true})});Ext.reg('WSSGrid',Application.WSSGrid);

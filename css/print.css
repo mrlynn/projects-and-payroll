@@ -1,0 +1,46 @@
+/* Remove unwanted elements */
+* {
+size: landscape;
+}
+@page figures {
+size: landscape;
+margin: 2cm;
+}
+#header, #nav, .noprint
+{
+display: none;
+}
+#header h1 {
+    font-size: 16px;
+    font-family:'lucida grande',tahoma,arial,sans-serif;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+#h1 {
+    font-size: 16px;
+    font-family:'lucida grande',tahoma,arial,sans-serif;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+
+/* Ensure the content spans the full width */
+#container, #container2, #content
+{
+width: 100%; margin: 0; float: none;
+}
+
+/* Change text colour to black (useful for light text on a dark background) */
+.lighttext
+{
+color: #000
+}
+
+/* Improve colour contrast of links */
+a:link, a:visited
+{
+color: #781351
+}

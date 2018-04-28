@@ -1,0 +1,99 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Calendar Example</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
+ 	<script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../../ext-all.js"></script>
+
+    <script language="javascript" src="calendar.js"></script>
+    <link rel="stylesheet" type="text/css" href="calendar.css" />
+    <style>
+        .ux-cal-highlight { background-color: gray; }
+    </style>
+</head>
+<body>
+    <a href="javascript:emulateAJAX()">Reset calendar data</a>
+</body>
+<script type="text/javascript">
+    emulateAJAX = function() {
+        // Sample data that could have been from AJAX request
+        homeCalendar.dates = {
+            '20090614': '14-Jun-2009 Data'
+        }
+        if (homeCalendar.rendered) {
+            homeCalendar.update();
+        }
+    };
+
+
+    homeCalendar = new Ext.ux.Calendar({
+        // Sample data
+        dates: {
+            '20090615': 'Test'
+        },
+        getData: function(o) {
+            return this.dates[o.date.format("Ymd")];
+        },
+        // Custom formatting based on date
+        formatDay: function(o) {
+            var data = this.getData(o);
+            if (data) {
+                o.css += " ux-cal-highlight";
+                o.caption += "*";
+            }
+        },
+        listeners: {
+            // Sample for click handling
+            click: function(o) {
+                if (o.date) {
+                    var data = this.getData(o);
+                    if (data) {
+                        Ext.Msg.alert('Alert', 'Event on ' + o.date.toString() + ":" + data);
+                    } else {
+                        Ext.Msg.alert('Alert', 'No event scheduled on ' + o.date.toString());
+                    }
+                }
+            },
+
+            // Sample for mouse over handling to show tool-tip
+            mouseover: function(o) {
+                if (!o.date) {
+                    this.tooltip.hide();
+                } else {
+                    var text = o.date.toString();
+                    if (this.tooltip.rendered) {
+                        this.tooltip.body.dom.innerHTML = text;
+                    } else {
+                        this.tooltip.html = text;
+                    }
+                    this.tooltip.show();
+                }
+            },
+
+            // Adding tool-tip to the calendar
+            render: function() {
+                this.tooltip = new Ext.ToolTip({
+                    target: this.body,
+                    showDelay: 20,
+                    trackMouse: true
+                })
+            },
+
+            destroy: function() {
+                this.tooltip.destroy();
+            }
+        }
+    });
+    Ext.QuickTips.init();
+
+    var win = new Ext.Window({
+        height: 300,
+        width: 300,
+        layout: 'fit',
+        items: homeCalendar,
+        title: 'Calendar'
+    });
+    win.show();
+</script>
+</html>

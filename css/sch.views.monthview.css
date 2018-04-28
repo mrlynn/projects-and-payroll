@@ -1,0 +1,10 @@
+.sch-monthview .sch-schedulerpanel .x-grid3-hd
+{
+    cursor:pointer;
+}
+
+.sch-monthview div.sch-event:hover
+{
+    border:1px solid #555;
+}
+

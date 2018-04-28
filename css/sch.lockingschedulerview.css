@@ -1,0 +1,38 @@
+/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ * Copied from ColumnLock extension v1.7.1 for Ext 3
+ */
+ 
+.x-grid3-locked, .x-grid3-unlocked {
+	overflow: hidden;
+	position: absolute;
+}
+
+.x-grid3-locked {
+	border-right: 1px solid #99BBE8;
+}
+
+.x-grid3-locked .x-grid3-scroller {
+	overflow: hidden;
+}
+
+.x-grid3-locked .x-grid3-row {
+	border-right: 0;
+}
+
+.x-grid3-scroll-spacer {
+	height: 19px;
+}
+
+.x-grid3-unlocked .x-grid3-header-offset {
+	padding-left: 0;
+}
+
+.x-grid3-unlocked .x-grid3-row {
+	border-left: 0;
+}
+

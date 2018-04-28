@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Ext.ux.form.DateRange [demo]</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="css/extjs/default.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+<!-- ExtJS Scripts -->
+<script type="text/javascript" src="extjs/3.1.0.core.js"></script>
+<script type="text/javascript" src="extjs/3.1.0.min.js"></script>
+
+<!-- DateRange Extension -->
+<script type="text/javascript" src="DateRange.min.js"></script>
+
+<script type="text/javascript">
+Ext.onReady(function(){
+    var win;
+
+    function handleDateSelection(start,end) {
+		alert('You chose:\nstart date: '+start+'\nend date: '+end)
+    }
+
+	Ext.get('datePicker').on('click',function(){
+        if(!win){
+            win = new Ext.Window({
+                applyTo:'dp-example-win',
+                layout:'fit',
+                width:350,
+                height:110,
+                closeAction:'hide',
+                items: new Ext.form.FormPanel({
+	                baseCls: 'x-example-form',
+                    applyTo: 'dpicker-example',
+                    style: {margin: 0,padding: 10},
+                    border:false,
+                    items: [
+   	                    new Ext.ux.form.DateRange({
+						    fieldLabel: 'Date Range',
+						    handler: handleDateSelection
+    	                })
+					]
+                }),
+                buttons: [{
+                    text: 'Close',
+                    handler: function(){ win.hide(); }
+                }]
+            });
+        }
+        win.show(this);
+	});
+});
+</script>
+</head>
+<body>
+<div class="infogroup">
+	<h1>Ext.ux.form.DateRange</h1>
+	<p class="pad">
+		The js is not minified so it is readable. See <a href="DateRange.js">DateRange.js</a> [or <a href="DateRange.min.js">minified</a> version]
+		<br /><br />
+		<button id="datePicker">Open Date Range Demo</button>
+	</p>
+	
+	<div id="dp-example-win" class="x-hidden">
+	    <div class="x-window-header">Date Range Picker Example</div>
+	    <div id="dpicker-example">
+	        <div class="x-tab" title="Date Picker">
+	        </div>
+	    </div>
+	</div>
+</div>
+<div class="infogroup">
+	<h1>Comments</h1>
+	My first extension to ExtJs, so constructive criticism please!<br/>
+	Originally inspired by the date range picker in jquery (see <a href="http://www.filamentgroup.com/lab/date_range_picker_using_jquery_ui_16_and_jquery_ui_css_framework" target="_blank">link</a>).<br />
+	This package also bundles the DateJs (1.0 Alpha-1) library class (see <a href="http://www.datejs.com/" target="_blank">link</a>).
+</div>
+<div class="infogroup">
+	<h1>Class Information</h1>
+	<table border="0" cellspacing="0" cellpadding="0" class="table">
+	<tr>
+		<td class="cell caption">Name:</td>
+		<td class="cell">Ext.ux.form.DateRange</td>
+	</tr>
+	<tr>
+		<td class="cell caption">Version:</td>
+		<td class="cell">0.1a</td>
+	</tr>
+	<tr>
+		<td class="cell caption">Extends:</td>
+		<td class="cell">Ext.form.TriggerField</td>
+	</tr>
+	<tr>
+		<td class="cell caption">Author:</td>
+		<td class="cell">Hans G. Doller</td>
+	</tr>
+	</table>
+</div>
+<div class="infogroup">
+	<h1>Config Options</h1>
+	<table border="0" cellspacing="0" cellpadding="0" class="table expand-h">
+	<thead>
+	<tr>
+		<td class="cell header">Entry</td>
+		<td class="cell header">Description</td>
+		<td class="cell header center">Default</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="cell caption left fw-200">format</td>
+		<td class="cell">Sets the format that the dates should be formatted.</td>
+		<td class="cell center">'Y-m-d'</td>
+	</tr>
+	<tr>
+		<td class="cell caption left fw-200">delimiter</td>
+		<td class="cell">Separator used between two dates.</td>
+		<td class="cell center">' to '</td>
+	</tr>
+	<tr>
+		<td class="cell caption left fw-200">handler</td>
+		<td class="cell">Callback function to use for handling date selection event.<br/>Example: <i>function ( StartDate, EndDate )</i></td>
+		<td class="cell center">function(s,e){}</td>
+	</tr>
+	<tr>
+		<td class="cell caption left fw-200">value</td>
+		<td class="cell">Value to be used on start-up. Supports DateJs formating.<br/>Example: <i>today-7days</i></td>
+		<td class="cell center">'today'</td>
+	</tr>
+	<tr>
+		<td class="cell caption left fw-200">presetDates</td>
+		<td class="cell">Array of preset objects to display in dropdown menu.<br/>Example: <i>[{ text: 'Caption To Display', dateStart: '...', dateEnd: '...' }, ...]</i></td>
+		<td class="cell center">see script :)</td>
+	</tr>
+	</tbody>
+	</table>
+</div>
+<div class="infogroup">
+	<h1>Public Methods</h1>
+	<table border="0" cellspacing="0" cellpadding="0" class="table expand-h">
+	<thead>
+	<tr>
+		<td class="cell header">Method</td>
+		<td class="cell header">Description</td>
+		<td class="cell header center">Return Value</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td class="cell caption left fw-200">getDates()</td>
+		<td class="cell">Retrieves all the selected date ranges.</td>
+		<td class="cell center">array</td>
+	</tr>
+	<tr>
+		<td class="cell caption left fw-200">getValue()</td>
+		<td class="cell">Retrieves the contents of the text field.</td>
+		<td class="cell center">string</td>
+	</tr>
+	<tr>
+		<td class="cell caption left fw-200">setValue(v date|string|array)</td>
+		<td class="cell">Sets the current value and updates the text field.</td>
+		<td class="cell center">self</td>
+	</tr>
+	</tbody>
+	</table>
+</div>
+</body>  
+</html>

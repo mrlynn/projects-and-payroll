@@ -1,0 +1,62 @@
+/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ */
+ 
+.sch-timetipwrap .sch-clock
+{
+    white-space:nowrap;
+    padding-left:26px;
+    min-height:17px;
+    position:relative;
+	height:20px;
+    background: url(../images/clock-bare.png) no-repeat left top !important;
+    display:block;
+}
+
+.ext-ie .sch-timetipwrap .sch-clock
+{
+    padding-left:6px;
+    background-image:none !important;
+}
+
+img.sch-hourIndicator
+{
+    background: url(../images/hourimg.png) no-repeat left top !important;
+    position:absolute;
+    left:10px;
+    top:0;
+    width:3px;
+    height:20px;
+}
+
+img.sch-minuteIndicator
+{
+    background: url(../images/minuteIndicator.png) no-repeat left top !important;
+    position:absolute;
+    left:10px;
+    top:0;
+    width:3px;
+    height:20px;
+}
+
+/* Only Gecko and Webkit support CSS3 */
+.ext-ie .sch-clock img
+{
+	display:none;
+}
+
+.sch-tip-ok
+{
+  padding-left:20px;
+  background: url(http://extjs.cachefly.net/ext-3.1.1/resources/images/default/dd/drop-yes.gif) no-repeat left top;
+}
+
+.sch-tip-notok
+{
+  padding-left:20px;
+  background: url(http://extjs.cachefly.net/ext-3.1.1/resources/images/default/dd/drop-no.gif) no-repeat left top;
+}

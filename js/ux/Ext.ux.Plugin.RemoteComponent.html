@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Ext.ux.Plugin.RemoteComponent - Demo / author: Timo Michna  - www.matikom.de</title>
+<link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/dev/resources/css/ext-all.css">
+
+<style type="text/css">
+body{
+	padding: 50px;
+	color: #15428B;
+	text-align: center;
+}
+a{
+	color: #15428B;
+}
+
+
+.matikom-logo{
+	margin-bottom: 50px;
+}
+
+.content-box{
+	border: 2px;
+	border-style: solid;
+	border-color: #15428B;
+	padding: 10px;
+	width: 660px;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+.content-box > ul{
+	list-style-type: disc;
+	margin-left: 15px;
+}
+
+
+
+.codeblock{
+	border: 2px;
+	border-style: solid;
+	border-color: #15428B;
+	padding: 10px;
+	text-align: left;
+}
+
+#footer{
+	margin-top: 50px;
+}
+.icon-plug-disable{
+	background-image: url(icons/disable.gif) !important;
+}
+.icon-plug-delete{
+	background-image: url(icons/delete.png) !important;
+}
+.icon-plug-add{
+	background-image: url(icons/add.png) !important;
+}
+</style>
+</head>
+<body>
+	<a href="http://www.matikom.de">
+		<img class="matikom-logo" title="matikom Homepage" src="http://matikom.de/logo.gif">
+	</a>
+	
+	<div class="content-box">
+		<h1><u>ExtJS - Plugins </u></h1>
+
+	</div>
+	<div id="intro" class="content-box">
+		<h1><u>ExtJS - Plugin - RemoteComponent / LiteRemoteComponent - Demo</u></h1>
+		<br/>
+		<h1><u>Version 0.3.0</u></h1>
+		<br/>
+		<p> <b>Plugin for ExtJS Ext.Container / Ext.Toolbar Elements to dynamically 
+	 add Components<br/> from a remote / AJAX source to the Element's body.<br/>author: Timo Michna / matikom</b></p>
+	 	<br/>
+	 	<p> License: GPL Version 3  - <a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a><br/>
+		 For commercial use, ask the author for permission and different license.<br/><br/></p>
+		 <p>* Loads configuration as JSON-String from a remote / AJAX source.</p>
+		<p>* Adds the Components to the Container body.</p>
+		<p>* Additionally to its own config options the class accepts all the configuration options <br> required to configure its internal Ext.Ajax.request().</p>
+  		<br/>
+ 		<p>* The RemoteComponent consists of the lightweight <b>Ext.ux.Plugin.LiteRemoteComponent</b> class and </br>
+		 the more configurable <b>Ext.ux.Plugin.RemoteComponent</b> which extends Ext.util.Observable.</p>
+ 		<br/>
+		<p> <b>Ext.ux.Plugin.RemoteComponent:</b></p>
+		<p>* Several events, which can be used to stop further processing by returning false.</p>
+		<p>* Processing can also be stopped by config option <b>breakOn</b> at any of the plugins events.</p>
+		<p>* AJAX requests to the remote source can be defered by config option <b>loadOn</b> to any event of the container. Usefull for lazy loading etc.</p>
+		<p>* LiteRemoteComponent and RemoteComponent - Plugins can be nested. So a Plugin can load and create Components, which also have (a) RemoteComponent - Plugin(s)</p>
+
+		<br/>
+		<h2><a href="#demo">link to Demo</a></h2>
+
+	</div>
+	
+	<div class="content-box">
+
+<h1><u>What?</u></h1><br />
+There are two versions of the Plugin:<br />
+- the lightweight <b>Ext.ux.Plugin.LiteRemoteComponent</b> class <br />
+- the more configurable <b>Ext.ux.Plugin.RemoteComponent</b> which extends Ext.util.Observable.<br />
+
+<br />
+
+<h1><u>Where to use?</u></h1><br />
+
+You can use the plugin with any <b>ExtJS Component</b> with <br />
+plugin ability - this is <b><i>Ext.Container, Ext.Toolbar</i></b><br />
+and every Component derived from both of them. <br />
+For example: <b><i>TabPanel, Tip, Window, FieldSet, FormPanel, <br />
+GridPanel, TreePanel, PagingToolbar</i></b>, etc.    <br />
+
+<br />
+<br />
+<h1><u>What to use for?</u></h1><br />
+
+This is a very small but powerfull plugin. use it for:<br />
+<ul>
+<li> <b>lazy loading</b> of components </li>
+<li> provide <b>different views of components</b> per request </li>
+<li> <b>remote Forms </b></li>
+<li> <b>cascade component views</b> based on server side authentification </li>
+<li> <b>developing of ExtJS component configuration</b>. Don't reload the document,<br />
+  destroy and reopen a component with a RemoteComponent plugin.</li>
+<li> and <b>many more</b> </li>
+</ul>
+ <br />
+<br />
+<br />
+<h1><u>How to use?</u></h1><br />
+
+At the moment this is a &quot;fire-and-forget&quot; plugin,<br />
+so make shure you provide a new instance every <br />
+
+time you use it (or make a function that returns a<br />
+new instance of the plugin). <br />
+The the json string returned from the remote source <br />
+can be any config definition that can be added to the<br />
+container's body (items). So to work (not to be usefull)<br />
+it must be at least an object literal.<br />
+<br />
+<br />
+<h1><u>Example 1:</u></h1>
+<br />
+
+Basic use.<br />
+<div style="margin:20px; margin-top:5px;" class="codeblock">
+	<pre dir="ltr">var container = new Ext.TabPanel({
+	title : 'give me a name',
+	plugins: new Ext.ux.Plugin.RemoteComponent({
+		url : 'url/to/remote/source.json'
+	})	
+});</pre>
+</div><br />
+<h1><u>Example 2:</u></h1>
+<br />
+You can easily provide <b>lazy loading</b> by using <br />
+config option <b>'loadOn'</b>. This can be any event <br />
+of the container you put the plugin in, but it<br />
+should be something usefull. <br />
+
+<b>&gt;&gt; loadOn : 'destroy'  &gt;&gt; bad</b><br />
+<b>&gt;&gt; loadOn : 'focus'    &gt;&gt; good</b>  <br />
+<br />
+<div style="margin:20px; margin-top:5px;" class="codeblock">
+	<pre dir="ltr">var plugin = new Ext.ux.Plugin.RemoteComponent({
+	url : 'url/to/remote/source.json',
+	loadOn : 'show'  /* defer processing to container's show-event */
+});
+var demo = new Ext.Panel({
+	title : 'give me a name',
+	plugins: plugin	
+});</pre>
+</div><br />
+<h1><u>Example 3:</u></h1>
+
+<br />
+You can grab the new Components made from the remote <br />
+configuration and put them somewhere else, if needed.<br />
+Usefull for Components with no plugin but a add functionality.<br />
+Put the Plugin in Component1, subscribe to the plugins <br />
+'beforeadd' event, grab the new component(s), add them<br />
+to Component2 and let the handler return false. <br />
+<br />
+<div style="margin:20px; margin-top:5px;" class="codeblock">
+	<pre dir="ltr">var getPlugin = function(remoteUrl){
+	return new Ext.ux.Plugin.RemoteComponent({
+		url : remoteUrl
+	});
+};
+var collection = new Ext.util.MixedCollection();
+var helper = getPlugin('url2.json');
+helper.on('beforeadd', function(component){
+		collection.add(component.getId(), component);
+		return false;
+	}
+);
+var demo = new Ext.Toolbar({
+	title : 'give me a name',
+	plugins: [getPlugin('url1.json'), helper] /* multiple Plugins*/	
+});</pre>
+
+</div>
+<br />
+<h1><u>Examples for Version 0.3.0 will follow soon</u></h1>
+		<br/>
+		<h2><a href="#demo">link to Demo</a></h2>
+
+</div>
+
+
+
+	
+	<div id="changelog" class="content-box">
+		<h1><u>ChangeLog</u></h1>
+		<br/>
+		<p>*<b> v 0.2.0 / Nov. 12 2007</b><br/>initial public release</p>
+		<br/>
+		<p>*<b> v 0.2.1 / Nov. 13 2007</b><br/>fixed bug: With config option "loadOn" the plugins AJAX request has been called every time the specified container's event has been fired. Now it's called only once - the first time the event fires.</p>		
+		<br/>
+		<p>*<b> v 0.3.0 / Aug. 01 2008</b><br/>
+			<ul>
+				<li>Plugin now 'really' <b>extends Ext.util.Observable</b> by calling superclass constructor.<br/>Thanks to evilkate.</li>
+				<li>Plugin now supports <b>loading of arrays</b> of component configurations <br/>Thanks to dka.</li>
+				<li>added config option <b>'mask'</b> to mask an Element while loading</li>
+				<li>added config option <b>'maskConfig'</b> to pass configuration to loadMask</li>
+				<li>changed config option 'purgeListeners' to <b>'purgeSubscribers'</b> to avoid overwriting it´s purgeListeners method</li>
+				<li>changed config option <b>'loadOn'</b> to additionally accept object literal configuration in {event: 'event', scope: 'scope'} style to listen for a different components (not the container) event. Also accepts event or object configuration as numeric array to listen to multiple events or components.Plugin will load by the first occurence of any of these events if 'purgeSubscribers' is not set to false. </li>
+			</ul>	
+		</p>
+	</div>
+	
+	<div id="legend" class="content-box">
+		<h1><u>Demo - Explanation</u></h1>
+		<br/>
+		<p>* The demo application consists of a Ext.TabPanel within a Ext.Panel.</p>
+		<p>* Each of the demo's AJAX requests makes a call to the same remote source. The conveyed config definition has a nested RemoteComponent-Plugin, which makes a request to another remote source.</p>
+		<p>* The Ext.TabPanel has a RemoteComponent-Plugin defined in its config definition and so it's loaded and rendered when the Ext.TabPanel is created. > 'Instant Tab'</p>
+		<p>* The BottomBar has five buttons (check for tooltips).</p>
+		<p><i><b>default</b></i> : Each click adds another Tab with a <b>Ext.ux.Plugin.RemoteComponent</b> - Plugin </p>
+		<p><i><b>lite</b></i> : Adds one Tab with a <b>Ext.ux.Plugin.LiteRemoteComponent</b> - Plugin.</p>
+		<p><i><b>defered</b></i> : Adds a Tab with a <b>Ext.ux.Plugin.RemoteComponent</b> - Plugin. The processing of the AJAX request and Component creation is defered to the container's "show"-event (<i>lazy loading</i>).</p>
+		<p><i><b>array</b></i> : Loads an <b>array on Components</b> into a FormPanel. Addionally the remote config will change the title of the TabPanel</p>
+		<p><i><b>mixed</b></i> : This is a more <b>complex example</b>. It loads additional components (Array)in a FormField triggered by a button. The other 2 buttons allow for disabling and removing the loaded Components. After removing the components can be loaded again. (Uses a workaround to remove the fieldLabels, as they otherwise want be removed)</p>
+	</div>
+
+	<div id="demo"  class="content-box"></div>
+
+	<br/>
+	<div id="footer">
+		Ext.ux.Plugin.RemoteComponent development sponsored by:<br/>
+		<a href="http://www.matikom.de">
+			<img class="matikom-logo" title="matikom Homepage" src="http://matikom.de/logo.gif">
+		</a>
+	</div>	
+</body>
+</html>
+<script type="text/javascript" src="http://extjs.com/deploy/dev/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="http://extjs.com/deploy/dev/ext-all-debug.js"></script>
+<script type="text/javascript" src="Ext.ux.Plugin.RemoteComponent.js"></script>
+<script type="text/javascript" src="RemoteComponent-Demo.js"></script>
+

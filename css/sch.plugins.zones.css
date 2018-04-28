@@ -1,0 +1,24 @@
+﻿/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ */
+ 
+.sch-zone
+{
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:1;
+  background: url(../images/zonebg.png) repeat;
+}
+
+/* IE z-index bug fix */
+.ext-ie .sch-schedulerpanel .x-grid3-body,
+{
+	position:relative;
+	z-index:2;
+}

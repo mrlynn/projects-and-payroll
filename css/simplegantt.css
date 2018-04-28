@@ -1,0 +1,40 @@
+.x-grid3-row .x-grid3-cell{
+	height:18px;
+}
+
+.ext-ie .x-grid3-row .x-grid3-cell{
+	height:22px;
+}
+
+.x-grid-group-hd div.x-grid-group-title 
+{
+	height:15px;
+	position:relative;
+	background-position:5px -1px;
+	padding:0 4px 2px 20px !important;
+	overflow:hidden;
+}
+
+.groupHeaderLeft
+{
+	position:absolute;
+	top:0;
+    background: url(images/groupHeaderLeft.png) no-repeat left top;
+	height:20px;
+}
+
+.groupHeaderRight
+{
+    background: url(images/groupHeaderRight.png) no-repeat right top;
+	height:20px;
+}
+
+.icon-prev
+{
+    background: url(../../images/arrow_left.png) no-repeat center center !important;
+}
+
+.icon-next
+{
+    background: url(../../images/arrow_right.png) no-repeat center center !important;
+}

@@ -1,0 +1,63 @@
+/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ */
+ 
+/* Vertical grid lines */
+.sch-columnLines td.x-grid3-col
+{
+    border-right: 1px dotted #ddd;
+    padding-left: 0px;
+}
+
+.sch-timetd
+{
+	height: 16px;
+}
+
+.ext-ie .sch-timetd
+{
+	height: 20px;
+}
+
+.sch-schedulerpanel .x-grid3-cell-inner
+{
+	height:inherit;
+}
+
+.ext-ie .sch-timetd .x-grid3-cell-inner
+{
+	height:100%;
+}
+
+.sch-timetd .x-grid3-cell-inner
+{
+	overflow:visible !important;
+    position:relative;
+    text-align:left;    /* reset the text-align to left, since time columns are aligned center (for the header)*/
+}
+
+/*  No ellipsis for header columns */
+.sch-schedulerpanel .x-grid3-hd-inner{
+	-o-text-overflow: clip;
+	text-overflow: clip;
+}
+
+/* Make sure the drag selector is shown above any event nodes */
+.x-view-selector {
+	z-index:5000;
+}
+
+/* Alternate rows use a semi-transparent png*/
+.sch-schedulerpanel .x-grid3-row-alt {
+	background:transparent url(../images/altrow.png) repeat;
+}
+
+/* Make sure rows are on top of any zone-plugin html*/
+.sch-schedulerpanel .x-grid3-row {
+	position:relative;
+	z-index:3;
+}

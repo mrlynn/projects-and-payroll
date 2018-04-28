@@ -1,0 +1,56 @@
+/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ */
+ 
+.sch-event
+{
+	border:1px solid #aaa;
+	background:url(../images/eventbg.png) repeat-x;
+    z-index:1000;
+    min-width:1px;			/* To make sure an event is never completely invisible */ 
+    position : absolute;
+    height:18px;
+    top:1px;
+}
+
+
+.sch-event-inner
+{
+    overflow:hidden;
+    white-space:nowrap;
+    margin-left:5px;
+    margin-right:5px;
+	margin-top:2px;
+}
+
+/* IE can't resize items properly without following class*/
+.ext-ie .sch-event
+{
+	overflow:hidden;
+}
+
+.ext-ie .sch-event .sch-event-inner
+{
+	margin-top:0;
+}
+
+/* Hide right border for events ending outside the view */
+.sch-event-endsoutside
+{
+	border-right:0 none;
+}
+
+/* Hide left border for events starting outside the view */
+.sch-event-startsoutside
+{
+	border-left:0 none;
+}
+
+.sch-event-selected 
+{
+	border-color:red !important;
+}

@@ -1,0 +1,594 @@
+.zoom {
+	background-image: url(../images/icons/zoom.png) !important;
+}
+.sun {
+	background-image: url(../images/icons/servers/sun.png) !important;
+}
+.todo{
+	background-image: url(../images/icons/table.png) !important;
+}
+.camera{
+	background-image: url(../images/icons/camera.png) !important;
+}
+.map{
+	background-image: url(../images/icons/map.png) !important;
+}
+.upload{
+	background-image: url(../images/icons/picture_add.png) !important;
+}
+.excel{
+	background-image: url(../images/icons/page_excel.png) !important;
+}
+.report_user{
+	background-image: url(../images/icons/report_user.png) !important;
+}
+.report{
+	background-image: url(../images/icons/report.png) !important;
+}
+.cake{
+	background-image: url(../images/icons/cake.png) !important;
+}
+.x-grid3-empty{
+   background: transparent
+   url(../images/icons/money.png)
+   no-repeat 3px 3px ! important;
+   padding-left:20px;
+}
+.x-grid3-hd-regular_pay{
+   background: transparent 
+   url(../images/icons/money.png) 
+   no-repeat 3px 3px ! important;
+   padding-left:20px;
+}
+.x-grid3-hd-otb_pay{
+   background: transparent 
+   url(../images/icons/money.png) 
+   no-repeat 3px 3px ! important;
+   padding-left:20px;
+}
+.x-grid3-hd-total_due{
+   background: transparent 
+   url(../images/icons/money.png) 
+   no-repeat 3px 3px ! important;
+   padding-left:20px;
+}
+.money{
+	background-image: url(../images/icons/money.png) !important;
+}
+.sunon {
+	background-image: url(../images/icons/servers/sunon.png) !important;
+}
+.sunoff {
+	background-image: url(../images/icons/servers/sunoff.png) !important;
+}
+.linux {
+	background-image: url(../images/icons/servers/linux.png) !important;
+}
+.linuxon {
+	background-image: url(../images/icons/servers/linuxon.png) !important;
+}
+.linuxoff {
+	background-image: url(../images/icons/servers/linuxoff.png) !important;
+}
+.aix {
+	background-image: url(../images/icons/servers/aix.png) !important;
+}
+.aixon {
+	background-image: url(../images/icons/servers/aixon.png) !important;
+}
+.aixoff {
+	background-image: url(../images/icons/servers/aixoff.png) !important;
+}
+.lock{
+	background-image: url(../images/icons/servers/lock.png) !important;
+}
+.genericon {
+	background-image: url(../images/icons/servers/genericon.png) !important;
+}
+.genericoff {
+	background-image: url(../images/icons/servers/genericoff.png) !important;
+}
+.bug{
+	background-image: url(../images/icons/bug.png) !important;
+}
+.edit{
+	background-image: url(../images/icons/page_edit.png) !important;
+}
+.calendar_add{
+	background-image: url(../images/icons/calendar_add.png) !important;
+}
+.calendar_delete{
+	background-image: url(../images/icons/calendar_delete.png) !important;
+}
+.calendar{
+	background-image: url(../images/icons/calendar.png) !important;
+}
+#welcome{
+	background-repeat:no-repeat;
+	background-position:center;
+	margin: 15px auto auto 10px;
+	font:normal 16px tahoma, arial, sans-serif;
+	height: 640;
+}
+#serveroutput{
+	background-color: #000000;
+	font:normal 12px courier, system, serif;
+	color: #ffffff;
+}
+
+
+#small{
+        margin: 0px auto auto 0px;
+        font:normal 8px tahoma, arial, sans-serif;
+}
+
+#aboutpanel{
+   border:2;
+   background: #ffffff;
+   padding-top:11px;
+   padding-left: 11px;
+   padding-bottom: 0px;
+}
+
+#footer
+{
+  border-top:1px solid #99BBE8;
+  border-right:1px solid #fff;
+  border-bottom:1px solid #fff;
+  border-left:1px solid #99BBE8;
+  padding:1px 2px 2px 1px;
+}
+
+#footer .leftalign {
+    font:normal 11px tahoma, arial, sans-serif;
+    color:white;
+    margin:5px;
+}
+
+#footer .rightalign {
+    font:normal 8px tahoma, arial, sans-serif;
+    color:white;
+    right: 5;
+    bottom: 2;
+    position: absolute;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+}
+
+.yellow {background-color: orange;}
+.red {background-color: red;}
+.green {background-color: green;}
+
+
+
+.clear{
+clear:both;}
+
+.graphcont {
+padding-top:10px;
+color:#000;
+font-weight:700;
+float:left
+}
+
+.graph {
+float:left;
+margin-top:10px;
+background-color:#cecece;
+position:relative;
+width:280px;
+padding:0
+}
+
+.graph .bar {
+display:block;
+position:relative;
+background-image:url(../images/bargraph.gif);
+background-position:right center;
+background-repeat:repeat-x;
+border-right:#538e02 1px solid;
+text-align:center;
+color:#fff;
+height:25px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:1.9em
+}
+
+.graph .bar span {
+position:absolute;
+left:1em
+}
+
+.server {
+	background-image:url(../images/icons/server.png) !important;
+}
+.notes {
+	background-image:url(../images/icons/note.png) !important;
+}
+.storage{
+	background-image:url(../images/icons/database.png) !important;
+}
+.table{
+	background-image:url(../images/icons/table.png) !important;
+}
+.brick_go{
+	background-image:url(../images/icons/brick_go.png) !important;
+}
+.project{
+	background-image:url(../images/icons/brick.png) !important;
+}
+.project_add{
+	background-image:url(../images/icons/brick_add.png) !important;
+}
+.project_delete{
+	background-image:url(../images/icons/brick_delete.png) !important;
+}
+.application{
+	background-image:url(../images/icons/application_view_columns.png) !important;
+}
+.company{
+	background-image:url(../images/icons/building.png) !important;
+}
+.company_add{
+	background-image:url(../images/icons/building_add.png) !important;
+}
+.company_delete{
+	background-image:url(../images/icons/building_delete.png) !important;
+}
+.tasks{
+	background-image:url(../images/icons/timeline_marker.png) !important;
+}
+.timesheet{
+	background-image:url(../images/icons/time.png) !important;
+}
+.user_add{
+	background-image:url(../images/icons/user_add.png) !important;
+}
+.user_delete{
+	background-image:url(../images/icons/user_delete.png) !important;
+}
+.users{
+	background-image:url(../images/icons/users.png) !important;
+}
+.user{
+	background-image:url(../images/icons/user.png) !important;
+}
+.ssh{
+	background-image:url(../images/icons/application_xp_terminal.png) !important;
+}
+.cancel{
+	background-image:url(../images/icons/cancel.png) !important;
+}
+.logs{
+	background-image:url(../images/icons/page_white_text.png) !important;
+}
+.history{
+	background-image:url(../images/icons/book_open.png) !important;
+}
+.stats{
+	background-image:url(../images/icons/chart_line.png) !important;
+}
+.users{
+	background-image:url(../images/icons/group.png) !important;
+}
+.repo{
+	background-image:url(../images/icons/package_green.png) !important;
+}
+.verify_package{
+	background-image:url(../images/icons/verify_package.png) !important;
+}
+.package_delete{
+	background-image:url(../images/icons/package_delete.png) !important;
+}
+.go{
+	background-image:url(../images/icons/accept.png) !important;
+}
+.package_go{
+	background-image:url(../images/icons/package_go.png) !important;
+}
+.packages{
+	background-image:url(../images/icons/packages.png) !important;
+}
+.cpu{
+	background-image:url(../images/icons/cpu.png) !important;
+}
+.memory{
+	background-image:url(../images/icons/memory.png) !important;
+}
+.cog{
+	background-image:url(../images/icons/cog.png) !important;
+}
+.cog_go{
+	background-image:url(../images/icons/cog_go.png) !important;
+}
+.clock_add{
+	background-image:url(../images/icons/clock_add.png) !important;
+}
+.clock_delete{
+	background-image:url(../images/icons/clock_delete.png) !important;
+}
+.clock{
+	background-image:url(../images/icons/time.png) !important;
+}
+.right{
+	background-image:url(../images/icons/arrow_right.png) !important;
+}
+.left{
+	background-image:url(../images/icons/arrow_left.png) !important;
+}
+.reload{
+	background-image:url(../images/icons/arrow_refresh.png) !important;
+}
+.heart{
+	background-image:url(../images/icons/heart.png) !important;
+}
+.heartadd{
+	background-image:url(../images/icons/heart_add.png) !important;
+}
+.del{
+	background-image:url(../images/icons/delete.png) !important;
+}
+.heartdel{
+	background-image:url(../images/icons/heart_delete.png) !important;
+}
+.add_book{
+	background-image:url(../images/icons/book_add.png) !important;
+}
+.add_doc{
+	background-image:url(../images/icons/page_white_add.png) !important;
+}
+.book{
+	background-image:url(../images/icons/book.png) !important;
+}
+.helpdoc{
+	background-image:url(../images/icons/page_white.png) !important;
+}
+.info{
+	background-image:url(../images/icons/information.png) !important;
+}
+.help{
+	background-image:url(../images/icons/help.png) !important;
+}
+.performance{
+	background-image:url(../images/icons/chart_line.png) !important;
+}
+.network{
+	background-image:url(../images/icons/connect.png) !important;
+}
+.application{
+	background-image:url(../images/icons/application_cascade.png) !important;
+}
+.report{
+	background-image:url(../images/icons/exclamation.png) !important;
+}
+.add{
+	background-image:url(../images/icons/add.png) !important;
+}
+.buildCore{
+	background-image:url(../images/icons/tag_green.png) !important;
+}
+.buildDeclining{
+	background-image:url(../images/icons/tag_orange.png) !important;
+}
+.buildNotPermitted{
+	background-image:url(../images/icons/tag_red.png) !important;
+}
+.buildUnknown{
+	background-image:url(../images/icons/tag_yellow.png) !important;
+}
+.serverCore{
+        background-image:url(../images/icons/server_core.png) !important;
+}
+.serverDeclining{
+        background-image:url(../images/icons/server_declining.png) !important;
+}
+.serverNotPermitted{
+        background-image:url(../images/icons/server_notpermitted.png) !important;
+}
+.serverUnknown{
+        background-image:url(../images/icons/server_uknown.png) !important;
+}
+.building{
+        background-image:url(../images/icons/building.png) !important;
+}
+.dns{
+        background-image:url(../images/icons/folder.png) !important;
+}
+.release{
+        background-image:url(../images/icons/folder.png) !important;
+}
+.accept{
+        background-image:url(../images/icons/accept.png) !important;
+}
+.home{
+        background-image:url(../images/icons/house.png) !important;
+}
+
+.blue-row .x-grid3-cell-inner{
+      color:blue;
+    }
+    .red-row .x-grid3-cell-inner{
+      color:red;
+    }
+    .green-row .x-grid3-cell-inner{
+      color:green;
+    } 
+    .yellow-row .x-grid3-cell-inner{
+      color:orange;
+    } 
+    .black-row .x-grid3-cell-inner{
+      color:black;
+} 
+#toptitle{
+        background-image: url(../images/bac_100.png) !important;
+        background-repeat:no-repeat;
+        background-position:right;
+        margin: 10px 4px 4px;
+        font:bold 14px tahoma, arial, sans-serif;
+}
+.custom-status-text-panel
+{
+  border-top:1px solid #99BBE8;
+  border-right:1px solid #fff;
+  border-bottom:1px solid #fff;
+  border-left:1px solid #99BBE8;
+  padding:1px 2px 2px 1px;
+}
+.x-grid3-cell-selectable, .x-grid3-cell-selectable * {-moz-user-select: text!important; -khtml-user-select: text!important}
+#loading-mask {
+  position: absolute;
+  left:     0;
+  top:      0;
+  width:    100%;
+  height:   100%;
+  z-index:  20000;
+  background-color: white;
+}
+
+#loading {
+  position: absolute;
+  left:     50%;
+  top:      50%;
+  padding:  2px;
+  z-index:  20001;
+  height:   auto;
+  margin:   -35px 0 0 -30px;
+}
+
+#loading .loading-indicator {
+  background: url(../images/loading.gif) no-repeat;
+  color:      #555;
+  font:       bold 13px tahoma,arial,helvetica;
+  padding:    8px 42px;
+  margin:     0;
+  text-align: center;
+  height:     auto;
+}
+
+.col{
+	margin:0 250px 0 10px;
+    zoom:1;
+    padding: 10px 0;
+}
+
+.col-last {
+    width: 220px;
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+
+.block{
+	margin-bottom:10px;
+}
+.block-title{
+	color: #1E4176;
+	font:normal 18px tahoma,verdana,sans-serif;
+    letter-spacing:-1px;
+    padding: 4px;
+	padding-left: 8px;
+}
+.block-body{
+	padding:8px;
+	padding-top:2px;
+}
+.block-body b{
+	color:#333333;
+	font-size:11px;
+}
+.block-body em {
+	display:block;
+	margin-top:5px;
+	font-size:11px;
+   color:gray;
+	text-align:right;
+}
+.list{
+	list-style: square;
+	padding-left:20px;
+	margin-top:5px;
+}
+
+.res-block {
+    padding-top:5px;
+    background:transparent url(block-top.gif) no-repeat;
+    width:210px;
+    margin-bottom:15px;
+}
+.res-block-inner {
+    padding:6px 11px;
+    background:transparent url(block-bottom.gif) no-repeat left bottom;
+}
+
+.res-block h3 {
+    font: bold 12px tahoma,arial,sans-serif;
+    color:#555;
+    margin-bottom:8px;
+}
+
+.res-block ul {
+    list-style-type: disc;
+    margin-left:15px;
+    font: normal 12px tahoma,arial,sans-serif;
+    color:#555;
+}
+
+.res-block ul li {
+    margin:0 0 5px 3px;
+}
+
+.hide-inherited .inherited {
+    display:none;
+}
+
+#header {
+    background: #7F99BE url(../images/layout-browser-hd-bg.gif) repeat-x center;
+}
+#header h1 {
+    font-size: 16px;
+    font-family:'lucida grande',tahoma,arial,sans-serif;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+#details-panel h2 {
+font-family:'lucida grande',tahoma,arial,sans-serif;
+ padding:10px 10px 0;
+ font-size:13px;
+ color:#15428B;
+}
+#details-panel h3 {
+font-family:'lucida grande',tahoma,arial,sans-serif;
+ padding:10px 10px 0;
+ font-size:11px;
+ color:#336600;
+}
+#details-panel p {
+font-family:'lucida grande',tahoma,arial,sans-serif;
+ font-size:10px;
+ padding:10px 10px 0;
+}
+#details-panel pre {
+ border-top:1px dotted #ddd;
+ border-bottom:1px dotted #ddd;
+ margin-top:10px;
+ padding:0 5px;
+ background:#f5f5f5;
+}
+#details-panel .details-info {
+ margin:9px;
+ padding:9px;
+ border:1px dotted #999;
+ color:#555;
+ background: #f9f9f9;
+ font-size: 9px;
+} 
+#caution {font-weight: bold; font-family: Verdana; font-size: 12pt; color: red; } 
+.x-grid3-summary-row .x-grid3-td-cost {
+	background-color:#e1e2e4;
+}
+

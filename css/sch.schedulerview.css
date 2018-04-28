@@ -1,0 +1,44 @@
+/*
+ * Ext Scheduler v1.5 beta
+ * Copyright(c) 2009-2010 Mats Bryntse Consulting
+ * mats@ext-scheduler.com
+ * http://www.ext-scheduler.com/license.html
+ *
+ */
+ 
+/* Classes for the multiple header rows, based on Condors GroupHeaderGrid plugin */
+td.ux-grid-hd-group-cell,
+td.ux-grid-hd-nogroup-cell {
+	background: url(http://extjs.cachefly.net/ext-3.1.1/resources/images/default/grid/grid3-hrow.gif) repeat-x bottom;
+}
+
+/* Classes for the multiple header rows, based on Condors GroupHeaderGrid plugin */
+td.ux-grid-hd-group-cell,
+td.ux-grid-hd-nogroup-cell {
+	background: url(http://extjs.cachefly.net/ext-3.1.1/resources/images/default/grid/grid3-hrow.gif) repeat-x bottom;
+}
+
+.sch-schedulerpanel table.sch-dayIndicator
+{
+	width:100%;
+}
+
+.sch-schedulerpanel .sch-daytableheader .x-grid3-hd-inner
+{
+	padding:0 !important;
+}
+
+.sch-schedulerpanel .sch-daytableheader td
+{
+	padding:4px 0 !important;
+}
+
+.sch-schedulerpanel .sch-dayIndicator td
+{
+	text-align:center;
+}
+
+.sch-schedulerpanel .sch-dayIndicator td:last-child
+{
+	border: 0 none;
+}

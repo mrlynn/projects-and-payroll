@@ -1,0 +1,25 @@
+[{
+
+                fieldLabel: 'Remote-Field 1',
+
+                name: 'first',
+
+                allowBlank:false
+
+            },{
+
+                fieldLabel: 'Remote-Field 2',
+
+                name: 'last'
+
+            },{
+                autoShow: true,
+			text: 'Remote-Button1',
+
+                xtype: 'button'
+            }, {
+                text: 'Remote-Button2',
+
+                xtype: 'button',
+			listeners: {'render': {fn: function(b){var c = b.ownerCt; c.setTitle('Fields Loaded');c.setIconClass('icon-plug-loaded')}}}
+            }]

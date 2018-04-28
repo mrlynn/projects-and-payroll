@@ -1,0 +1,7 @@
+#!/bin/sh
+for ii in `cat MANIFEST`; do
+	cat $ii | ./jsmin > $ii.min
+	echo $ii
+	cp $ii.min /var/www/vhosts/wss/httpdocs/payroll/v2/js/$ii
+	chown mlynn.mlynn /var/www/vhosts/wss/httpdocs/payroll/v2/js/$ii
+done

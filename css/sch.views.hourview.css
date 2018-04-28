@@ -1,0 +1,27 @@
+.sch-dayview .sch-schedulerpanel .x-grid3-hd
+{
+    cursor:pointer;
+}
+
+/* the east border of a event is not visible for some reason in IE */
+.ext-ie.sch-dayview .x-resizable-handle-east
+{
+    right: 1px;
+}
+
+table.quarterMinuteIndicator
+{
+    height:auto;
+    width:100%;
+}
+
+table.quarterMinuteIndicator td {
+    text-align:left;
+	border:0 none;
+}
+
+.sch-quarterminuteheader .x-grid3-hd-inner
+{
+	padding-left:2px !important;
+	padding-right:2px !important;
+}
